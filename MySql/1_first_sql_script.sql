@@ -1,4 +1,4 @@
-create database startersql;
+create database if not exists startersql;
 use startersql;
 create table users (
 	id int auto_increment primary key,

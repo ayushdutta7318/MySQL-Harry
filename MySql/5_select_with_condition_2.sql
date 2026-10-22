@@ -1,0 +1,1 @@
+select * from users where date_of_birth < '1995-9-9';

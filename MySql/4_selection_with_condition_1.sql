@@ -1,0 +1,1 @@
+select name, email from users where gender="Female";
