@@ -21,4 +21,12 @@ select id, gender, lower(name) as lower_name, length(name) as name_len from user
 select id, gender, concat(lower(name), "5677") as username from users;
 
 -- chaining functions:
-select id, gender, concat(lower(name), "12345") as username, length(name) as name_len, year(date_of_birth) as yob from users;
+select id, name, concat(lower(name), "12345") as username, length(name) as name_len, year(date_of_birth) as yob from users;
+
+-- numbers of days lived by a person
+select id, name, datediff(curdate(), date_of_birth) from users;
+
+-- Math Functions:
+select gender, ceil(avg(salary)) as avg_salary from users group by gender;
+select gender, round((avg(salary)) as avg_salary from users group by gender;
+select gender, floor(avg(salary)) as avg_salary from users group by gender;

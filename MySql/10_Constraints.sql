@@ -10,5 +10,5 @@ modify column name varchar(100) not null;
 -- select * from users;
 
 -- check constraint
--- Alter table users Add constraint check_dob check (date_of_birth > '1900-01-01');
+Alter table users Add constraint check_dob check (date_of_birth > '1900-01-01');
 select * from users;
