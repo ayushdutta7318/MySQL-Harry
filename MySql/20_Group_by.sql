@@ -24,3 +24,7 @@ FROM users
 WHERE refered_by_id IS NOT NULL
 GROUP BY refered_by_id
 HAVING COUNT(*) > 1;
+
+-- ROLLUP: give grand total
+
+SELECT gender AS "gender", AVG(salary) AS "avg_salary", COUNT(*) FROM users GROUP BY gender WITH ROLLUP;
